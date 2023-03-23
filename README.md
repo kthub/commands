@@ -1,22 +1,45 @@
 ## Commands
 
 ### Git
+Simplistic-push
+```
+git add --all; git commit -m 'commit'; git push origin master
+```
 Alias for simplistic-push
 ```
-alias gpush="git add --all; git commit -m 'commit'; git push origin master"
+alias gp="git add --all; git commit -m 'commit'; git push origin master"
+```
+Add execute permission
+```
+git update-index --add --chmod=+x ${FILENAME}
+```
+Check file permission
+```
+git ls-files -s
 ```
 
 ### SSH
-Generate keys
+Generate key pair
 ```
-ssh-keygen -t rsa -b 4096 -C "keiichi.tsuda@gmail.com" -f id_rsa_kt
+ssh-keygen -t rsa -b 4096 -C "xxxxxxx@gmail.com" -f id_rsa_kt
 ```
 If you unable to ssh, try followings.
 ```
-ssh root@cicd01 -o PreferredAuthentications=password
-# .ssh/config を変えてもOK
+ssh user@host -o PreferredAuthentications=password
 ```
 
+### Shell
+Execute command every 3 seconds
+```
+while :; do ${COMMAND}; sleep3; done
+```
+Enable ssh-agent
+```
+eval `ssh-agent`; ssh-add ~/.ssh/id_rsa
+```
+
+---
+### [Obsolete]  
 ### Bookmarklet
 You can use the bookmarklet below to add a copy button to the code section of GitHub README.md.
 ```

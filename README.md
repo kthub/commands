@@ -39,7 +39,8 @@ eval `ssh-agent`; ssh-add ~/.ssh/id_rsa
 ```
 
 ---
-### [Obsolete]  
+### [Obsolete]
+
 ### Bookmarklet
 You can use the bookmarklet below to add a copy button to the code section of GitHub README.md.
 ```
